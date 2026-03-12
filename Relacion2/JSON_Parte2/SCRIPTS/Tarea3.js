@@ -49,3 +49,53 @@ function generarTabla() {
   const contenedor = document.getElementById("contenedor");
   contenedor.appendChild(tabla);
 }
+
+// Código del Profe.
+
+/*
+  const datos = [
+    { alumno: "Ana", nota1: 7, nota2: 9 },
+    { alumno: "Luis", nota1: 8, nota2: 6 },
+    { alumno: "Marta", nota1: 10, nota2: 9 },
+  ];
+  function generarTabla() {
+    const tabla = document.createElement("table");
+    const tbody = document.createElement("tbody");
+
+    const row = document.createElement("tr");
+
+    const cellHead1 = document.createElement("th");
+    const cellHeadText1 = document.createTextNode("Alumno");
+
+    const cellHead2 = document.createElement("th");
+    const cellHeadText2 = document.createTextNode("Nota 1");
+
+    const cellHead3 = document.createElement("th");
+    const cellHeadText3 = document.createTextNode("Nota 2");
+
+    cellHead1.appendChild(cellHeadText1);
+    cellHead2.appendChild(cellHeadText2);
+    cellHead3.appendChild(cellHeadText3);
+
+    tbody.appendChild(row);
+
+    datos.forEach((dato) => {
+      const row = document.createElement("tr");
+
+      for (let clave in dato) {
+        const cell = document.createElement("td");
+        const cellText = document.createTextNode(dato[clave]);
+        cell.appendChild(cellText);
+        row.appendChild(cell);
+      }
+
+      tbody.appendChild(row);
+    });
+
+    tabla.appendChild(tbody);
+    tabla.setAttribute("border", "2");
+
+    const contenedor = document.getElementById("contenedor");
+    contenedor.appendChild(tabla);
+  }
+*/
