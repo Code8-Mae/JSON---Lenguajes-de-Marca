@@ -1,0 +1,25 @@
+[
+  {
+    "color": "negro",
+    "grosor": "gordo",
+    "uso": "pizarra vileda",
+    "esta_cargado": true,
+    "tamanyo_cm": 10
+  },
+
+  {
+    "color": "rojo",
+    "grosor": "fino",
+    "uso": "papel",
+    "esta_cargado": false,
+    "tamanyo_cm": 15
+  },
+
+  {
+    "color": "azul",
+    "grosor": "gordo",
+    "uso": "pizarra vileda",
+    "esta_cargado": false,
+    "tamanyo_cm": 10
+  }
+]

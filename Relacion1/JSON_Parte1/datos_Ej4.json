@@ -1,0 +1,69 @@
+[
+  {
+    "modelo": "Dell XPS 15",
+
+    "precio": {
+      "moneda": "USD",
+      "cantidad": 1800
+    },
+
+    "procesador": "Intel Core i7 - 12700H",
+
+    "componentes": {
+      "RAM": "16GB",
+      "Almacenamiento": "512GB SSD",
+      "grafica": "NVIDIA RTX 3050"
+    }
+  },
+
+  {
+    "modelo": "MackBook Pro 14\"",
+
+    "precio": {
+      "moneda": "USD",
+      "cantidad": 2000
+    },
+
+    "procesador": "Apple M2 Pro",
+
+    "componentes": {
+      "RAM": "16GB",
+      "Almacenamiento": "1TB SSD",
+      "grafica": "Retina Display"
+    }
+  },
+
+  {
+    "modelo": "Asus Rog Strix G15",
+
+    "precio": {
+      "moneda": "USD",
+      "cantidad": 1600
+    },
+
+    "procesador": "AMD Ryzen 9 6900HX",
+
+    "componentes": {
+      "RAM": "32GB",
+      "Almacenamiento": "1TB SSD",
+      "grafica": "NVIDIA RTX 3070"
+    }
+  },
+
+  {
+    "modelo": "HP Pavilion 15",
+
+    "precio": {
+      "moneda": "USD",
+      "cantidad": 900
+    },
+
+    "procesador": "Intel Core i5 - 1240P",
+
+    "componentes": {
+      "RAM": "8GB",
+      "Almacenamiento": "256GB SSD",
+      "grafica": "Intel Iris Xe"
+    }
+  }
+]

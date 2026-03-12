@@ -1,0 +1,37 @@
+{
+  "personal": {
+    "documento": {
+      "tipo": "DNI",
+      "numero": "99223366M"
+    },
+
+    "nombre": "Juan Pardo  Martín",
+
+    "titulacion": {
+      "tipo": "superior",
+      "nombre": "Ingeniería Informática"
+    },
+
+    "curso_academico": "1997/1998",
+
+    "domicilios": [
+      {
+        "tipo": "familiar",
+        "direccion": {
+          "calle": "C/ Principal",
+          "numero": "1"
+        }
+      },
+
+      {
+        "tipo": "habitual",
+        "direccion": {
+          "calle": "C/ Secundaria",
+          "numero": "2"
+        }
+      }
+    ]
+  },
+
+  "pagos": ["Pago fraccionado 1", "Pago fraccionado 2"]
+}

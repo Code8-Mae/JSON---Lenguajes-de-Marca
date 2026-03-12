@@ -1,0 +1,24 @@
+{
+  "datos": {
+    "nombre": "Crisitan",
+    "apellido": "Redondo Cervantes",
+    "edad": 18,
+    "nota": 10.999
+  },
+
+  "examenes": {
+    "notas": [{ "xml": 10.99 }, { "html": 10.99 }],
+    "nota_media": 10.99
+  },
+
+  "examenes2": [
+    {
+      "trimestre": "primero",
+      "notas": [{ "xml": 10.99 }, { "html": 10.99 }, { "nota_media": 10.99 }]
+    },
+    {
+      "trimestre": "segundo",
+      "notas": [{ "xml": 9.99 }, { "html": 9.99 }, { "nota_media": 9.99 }]
+    }
+  ]
+}
