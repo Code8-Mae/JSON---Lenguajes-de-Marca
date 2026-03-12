@@ -94,8 +94,5 @@ function generarTabla() {
 
     tabla.appendChild(tbody);
     tabla.setAttribute("border", "2");
-
-    const contenedor = document.getElementById("contenedor");
-    contenedor.appendChild(tabla);
   }
 */
