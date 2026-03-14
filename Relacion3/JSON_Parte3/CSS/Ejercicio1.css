@@ -30,7 +30,7 @@ body {
   padding: 20px;
 }
 
-.caja {
+.caja-oscura {
   flex: 1;
   padding: 18px 24px;
   border-radius: 4px;
@@ -40,13 +40,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.caja-oscura {
   background-color: #1e4d3a;
   font-weight: bold;
 }
 
 .caja-dorada {
+  flex: 1;
+  padding: 18px 24px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #b87c2a;
 }
