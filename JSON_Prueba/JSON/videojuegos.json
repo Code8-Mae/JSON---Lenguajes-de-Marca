@@ -1,0 +1,45 @@
+[
+  {
+    "nombre": "Assassin's Creed",
+    "estudio": "Ubisoft",
+    "Fecha_Lanzamiento": "2007-11-13",
+    "Plataformas": ["PC", "PlayStation 3", "Xbox 360"],
+    "Valoraciones": [
+      {
+        "usuario": "Gamer123",
+        "puntuacion_Jugabilidad": 9,
+        "puntuacion_Diseño": 8,
+        "puntuacion_Historia": 7
+      },
+
+      {
+        "usuario": "PlayerOne",
+        "puntuacion_Jugabilidad": 8,
+        "puntuacion_Diseño": 9,
+        "puntuacion_Historia": 8
+      }
+    ]
+  },
+
+  {
+    "nombre": "Assassin's Creed II",
+    "estudio": "Ubisoft",
+    "Fecha_Lanzamiento": "2009-11-17",
+    "Plataformas": ["PC", "PlayStation 3", "Xbox 360"],
+    "Valoraciones": [
+      {
+        "usuario": "AlonsitoRoblox09",
+        "puntuacion_Jugabilidad": 5,
+        "puntuacion_Diseño": 7,
+        "puntuacion_Historia": 6
+      },
+
+      {
+        "usuario": "PlayForEver",
+        "puntuacion_Jugabilidad": 8,
+        "puntuacion_Diseño": 8,
+        "puntuacion_Historia": 9
+      }
+    ]
+  }
+]
