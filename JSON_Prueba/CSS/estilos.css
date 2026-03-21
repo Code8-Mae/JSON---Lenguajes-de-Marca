@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #f0faf0 0%, #fff5f5 100%);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+header {
+  background-color: #5cb85c;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+#juegos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+section {
+  background-color: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+section h3 {
+  background-color: #5cb85c;
+  color: white;
+  text-align: center;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#plataformas {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#plataformas span {
+  background-color: #5cb85c;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+article > div {
+  border-left: 3px solid #e57373;
+  background-color: #fff8f8;
+  padding: 10px 14px;
+  border-radius: 0 6px 6px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+article > div > div {
+  color: #444;
+  font-size: 13px;
+}

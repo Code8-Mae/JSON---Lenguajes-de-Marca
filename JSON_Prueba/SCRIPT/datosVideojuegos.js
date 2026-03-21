@@ -24,56 +24,62 @@ function generaListaJuegos(datosJuegos) {
 
     const JuegoPlataformasDiv = document.createElement("div");
     JuegoPlataformasDiv.setAttribute("id", "plataformas");
-    const JuegoPlataforma1 = document.createElement("span");
-    const JuegoPlataforma2 = document.createElement("span");
-    const JuegoPlataforma3 = document.createElement("span");
 
     const JuegoArticle = document.createElement("article");
-    const JuegoDivValoraciones = document.createElement("div");
-    const JuegoValoracion1 = document.createElement("div");
-    const JuegoValoracion2 = document.createElement("div");
-    const JuegoValoracion3 = document.createElement("div");
-    const JuegoValoracion4 = document.createElement("div");
 
-    JuegoNombre = document.createTextNode(juego.nombre);
-    JuegoEstudio = document.createTextNode(juego.estudio);
-    JuegoAnyio = document.createTextNode(juego.Fecha_Lanzamiento);
+    NombreJuego = document.createTextNode(juego.nombre);
+    EstudioJuego = document.createTextNode(juego.estudio);
+    AnyioJuego = document.createTextNode(juego.Fecha_Lanzamiento);
+
+    JuegoNombre.append(NombreJuego);
+    JuegoEstudio.append(EstudioJuego);
+    JuegoAnyio.append(AnyioJuego);
 
     juegoSection.append(JuegoNombre, JuegoEstudio, JuegoAnyio);
 
     for (let i = 0; i < juego.Plataformas.length; i++) {
-      JuegoPlataforma1 = document.createTextNode(juego.Plataformas[i]);
-      JuegoPlataforma2 = document.createTextNode(juego.Plataformas[i]);
-      JuegoPlataforma3 = document.createTextNode(juego.Plataformas[i]);
+      const span = document.createElement("span");
 
-      JuegoPlataformasDiv.append(JuegoPlataforma1);
-      JuegoPlataformasDiv.append(JuegoPlataforma2);
-      JuegoPlataformasDiv.append(JuegoPlataforma3);
+      const textoPlataforma = document.createTextNode(juego.Plataformas[i]);
 
-      JuegoArticle.append(JuegoDivValoraciones);
+      span.append(textoPlataforma);
 
-      juegoSection.append(JuegoArticle);
+      JuegoPlataformasDiv.append(span);
     }
+
+    juegoSection.append(JuegoPlataformasDiv);
 
     for (let i = 0; i < juego.Valoraciones.length; i++) {
-      JuegoValoracion1 = document.createTextNode(juego.Valoraciones[i].usuario);
-      JuegoValoracion2 = document.createTextNode(
-        juego.Valoraciones[i].puntuacion,
+      const divValoracion = document.createElement("div");
+
+      const divGamer = document.createElement("div");
+      const divJugabilidad = document.createElement("div");
+      const divDiseño = document.createElement("div");
+      const divHistoria = document.createElement("div");
+
+      const textoUsuario = document.createTextNode(
+        "Usuario: " + juego.Valoraciones[i].usuario,
       );
-      JuegoValoracion3 = document.createTextNode(
-        juego.Valoraciones[i].comentario,
+      const textoJugabilidad = document.createTextNode(
+        "Jugabilidad: " + juego.Valoraciones[i].puntuacion_Jugabilidad,
       );
-      JuegoValoracion4 = document.createTextNode(juego.Valoraciones[i].fecha);
+      const textoDiseño = document.createTextNode(
+        "Diseño: " + juego.Valoraciones[i].puntuacion_Diseño,
+      );
+      const textoHistoria = document.createTextNode(
+        "Historia: " + juego.Valoraciones[i].puntuacion_Historia,
+      );
 
-      JuegoDivValoraciones.append(JuegoValoracion1);
-      JuegoDivValoraciones.append(JuegoValoracion2);
-      JuegoDivValoraciones.append(JuegoValoracion3);
-      JuegoDivValoraciones.append(JuegoValoracion4);
+      divGamer.append(textoUsuario);
+      divJugabilidad.append(textoJugabilidad);
+      divDiseño.append(textoDiseño);
+      divHistoria.append(textoHistoria);
 
-      JuegoArticle.append(JuegoDivValoraciones);
-
-      juegoSection.append(JuegoArticle);
+      divValoracion.append(divGamer, divJugabilidad, divDiseño, divHistoria);
+      JuegoArticle.append(divValoracion);
     }
+
+    juegoSection.append(JuegoArticle);
 
     principal.append(juegoSection);
   });
