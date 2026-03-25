@@ -23,7 +23,7 @@ function generaListaJuegos(datosJuegos) {
     const JuegoAnyio = document.createElement("h3");
 
     const JuegoPlataformasDiv = document.createElement("div");
-    JuegoPlataformasDiv.setAttribute("class", "plataforma");
+    JuegoPlataformasDiv.setAttribute("id", "plataforma");
 
     const JuegoArticle = document.createElement("article");
 
