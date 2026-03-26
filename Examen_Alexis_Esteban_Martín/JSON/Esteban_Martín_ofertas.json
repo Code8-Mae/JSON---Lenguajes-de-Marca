@@ -1,0 +1,31 @@
+{
+  "nombreAgencia": "Agencia de Viajes Esteban Martín",
+  "informacion": {
+    "telefono": 601638495,
+    "email": "viajes@estebanmartin.com"
+  },
+
+  "excursiones": [
+    {
+      "destino": "Savonna",
+      "pais": "Italia",
+      "precio": "500 €",
+      "actividades": [
+        "Visita al puerto",
+        "Degustación de mariscos",
+        "Paseo por el casco antiguo"
+      ]
+    },
+
+    {
+      "destino": "Giza",
+      "pais": "Egipto",
+      "precio": "750 €",
+      "actividades": [
+        "Visita a las pirámides",
+        "Degustación de comida local",
+        "Paseo por las dunas del desierto"
+      ]
+    }
+  ]
+}
