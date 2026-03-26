@@ -1,7 +1,7 @@
 const sectionDatos = document.querySelector("#datos");
 const sectionExcursiones = document.querySelector("#excursiones");
 
-const url = "../JSON/Esteban_Martín_ofertas.json";
+const url = "../JSON/Esteban_Martin_ofertas.json";
 
 async function cargarJSON() {
   try {
