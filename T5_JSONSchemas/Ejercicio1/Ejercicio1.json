@@ -1,0 +1,9 @@
+{
+  "$schema": "Ejercicio1.schema.json",
+  "marca": "Tesla",
+  "modelo": "Model 3 Performance",
+  "diesel": false,
+  "gasolina": false,
+  "hibrido": true,
+  "puntuacionesCliente": [8.5, 7.2, 4.9]
+}

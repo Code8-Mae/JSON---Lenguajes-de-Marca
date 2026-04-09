@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ejercicio1",
+  "description": "Esquema para un objeto que representa un coche",
+  "properties": {
+    "marca": {
+      "type": "string",
+      "description": "La marca del coche"
+    },
+    "modelo": {
+      "type": "string",
+      "description": "El modelo del coche"
+    },
+    "diesel": {
+      "type": "boolean",
+      "description": "Indica si el coche es diésel"
+    },
+    "gasolina": {
+      "type": "boolean",
+      "description": "Indica si el coche es de gasolina"
+    },
+    "hibrido": {
+      "type": "boolean",
+      "description": "Indica si el coche es híbrido"
+    },
+    "puntuacionesCliente": {
+      "type": "array",
+      "description": "Puntuaciones dadas por los clientes",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 1,
+      "uniqueItems": false
+    }
+  },
+  "required": ["marca", "modelo", "puntuacionesCliente"],
+  "additionalProperties": false,
+  "patternProperties": {
+    "^\\$": {}
+  }
+}

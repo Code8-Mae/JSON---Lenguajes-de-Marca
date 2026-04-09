@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ejemplo de Esquema",
+  "description": "Este es el primer ejemplo que es para un objeto profesor",
+  "properties": {
+    "nombre": {
+      "type": "string",
+      "description": "El nombre del profesor"
+    },
+
+    "edad": {
+      "type": "integer",
+      "description": "La edad del profesor",
+      "minimum": 0,
+      "maximum": 90
+    },
+
+    "departamento": {
+      "type": "string",
+      "description": "El departamento al que pertenece el profesor"
+    },
+
+    "asignaturas": {
+      "type": "array",
+      "description": "Las asignaturas que imparte el profesor",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": false
+    }
+  },
+  "required": ["nombre", "departamento", "asignaturas"],
+  "additionalProperties": false,
+  "patternProperties": {
+    "^\\$": {}
+  }
+}
