@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ejemplo de Esquema",
+  "description": "Este es el primer ejemplo que es para un objeto profesor",
+  "type": "object",
+  "properties": {
+    "datos personales": {
+      "descripcion": "Datos personales del profesor",
+      "type": "object",
+      "properties": {
+        "nombre": {
+          "type": "string",
+          "description": "El nombre del profesor"
+        },
+
+        "edad": {
+          "type": "integer",
+          "description": "La edad del profesor",
+          "minimum": 0,
+          "maximum": 90
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "datos academicos": {
+      "descripcion": "Datos académicos del profesor",
+      "type": "object",
+      "properties": {
+        "departamento": {
+          "type": "string",
+          "description": "El departamento al que pertenece el profesor"
+        },
+
+        "asignaturas": {
+          "type": "array",
+          "description": "Las asignaturas que imparte el profesor",
+          "items": {
+            "type": "object",
+            "properties": {
+              "asignatura": {
+                "type": "string",
+                "description": "El nombre de la asignatura"
+              },
+
+              "curso": {
+                "type": "string",
+                "description": "El curso académico en el que se imparte la asignatura"
+              }
+            },
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": ["datos personales", "datos academicos"],
+  "additionalProperties": false,
+  "patternProperties": {
+    "^\\$": {}
+  }
+}

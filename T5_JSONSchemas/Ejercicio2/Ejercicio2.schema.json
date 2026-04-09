@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "JUAN ANTONIO TE QUIERO NUNCA DEJES DE DARME CLASES": "Holis",
+  "title": "Ejercicio 2 de Schemas",
+  "description": "Este es el segundo ejercicio de schemas, el cual es para un objeto mueble",
+  "type": "object",
+  "properties": {
+    "muebles": {
+      "description": "El tipo de mueble",
+      "type": "string"
+    },
+
+    "tipoMadera": {
+      "description": "El tipo de madera del mueble",
+      "type": "string"
+    },
+
+    "medidas": {
+      "description": "Medidas del mueble",
+      "type": "object",
+      "properties": {
+        "ancho_cm": {
+          "description": "El ancho del mueble en centímetros",
+          "type": "number",
+          "minimum": 0
+        },
+        "alto_cm": {
+          "description": "El alto del mueble en centímetros",
+          "type": "number",
+          "minimum": 0
+        },
+        "profundidad_cm": {
+          "description": "La profundidad del mueble en centímetros",
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": ["ancho_cm", "alto_cm", "profundidad_cm"]
+    }
+  },
+  "required": ["mueble", "tipoMadera", "medidas"]
+}

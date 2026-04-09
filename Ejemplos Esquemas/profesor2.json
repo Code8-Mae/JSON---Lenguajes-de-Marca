@@ -1,0 +1,25 @@
+{
+  "$schema": "profesor2.schema.json",
+  "datos personales": {
+    "nombre": "Juan Pérez",
+    "edad": 45
+  },
+
+  "datos academicos": {
+    "departamento": "Matemáticas",
+    "asignaturas": [
+      {
+        "asignatura": "Álgebra",
+        "curso": "2023-2024"
+      },
+      {
+        "asignatura": "Cálculo",
+        "curso": "2023-2024"
+      },
+      {
+        "asignatura": "Geometría",
+        "curso": "2023-2024"
+      }
+    ]
+  }
+}
