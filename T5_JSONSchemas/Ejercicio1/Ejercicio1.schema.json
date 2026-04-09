@@ -2,6 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Ejercicio1",
   "description": "Esquema para un objeto que representa un coche",
+  "type": "object",
   "properties": {
     "marca": {
       "type": "string",
@@ -27,9 +28,13 @@
       "type": "array",
       "description": "Puntuaciones dadas por los clientes",
       "items": {
-        "type": "number"
+        "type": "number",
+        "description": "Nota puesta por los clientes",
+        "minimum": 0,
+        "maximum": 10
       },
       "minItems": 1,
+      "maxItems": 5,
       "uniqueItems": false
     }
   },
