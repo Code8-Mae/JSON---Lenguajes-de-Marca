@@ -1,0 +1,34 @@
+{
+  "$schema": "Ejercicio4.schema.json",
+  "informacionGeneral": {
+    "idPedido": "A123",
+    "fecha": "2020-10-12T17:58:00.000Z",
+    "cliente": {
+      "idCliente": "C325",
+      "nombre": "Juan Antonio López",
+      "email": "juanan@gmail.com",
+      "direccion": {
+        "calle": "Luxemburgo",
+        "ciudad": "Madrid",
+        "codigoPostal": "28001",
+        "pais": "España"
+      }
+    },
+    "productos": [
+      {
+        "idProducto": "P5678",
+        "nombre": "Camiseta",
+        "cantidad": 2,
+        "precioUnitario": 15.99
+      },
+      {
+        "idProducto": "P9012",
+        "nombre": "Pantalón",
+        "cantidad": 1,
+        "precioUnitario": 39.99
+      }
+    ],
+    "estadoPedido": ["enviado", "en preparacion", "entregado"],
+    "totalPedido": 71.97
+  }
+}

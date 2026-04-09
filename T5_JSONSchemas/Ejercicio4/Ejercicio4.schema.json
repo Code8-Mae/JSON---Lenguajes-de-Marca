@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ejercicio 4 de Schemas",
+  "description": "Este es el cuarto ejercicio de schemas, el cual es para un objeto mueble con un nuevo campo llamado 'color'",
+  "type": "object",
+  "properties": {
+    "informacionGeneral": {
+      "description": "Información general del pedido",
+      "type": "object",
+      "properties": {
+        "idPedido": {
+          "description": "El identificador único del pedido",
+          "type": "string",
+          "maxLength": 7
+        },
+
+        "fecha": {
+          "description": "La fecha en la que se realizó el pedido",
+          "type": "string",
+          "format": "date-time"
+        },
+
+        "cliente": {
+          "description": "Información del cliente que realizó el pedido",
+          "type": "object",
+          "properties": {
+            "idCliente": {
+              "description": "El identificador único del cliente",
+              "type": "string"
+            },
+
+            "nombre": {
+              "description": "El nombre completo del cliente",
+              "type": "string"
+            },
+
+            "email": {
+              "description": "La dirección de correo electrónico del cliente",
+              "type": "string",
+              "format": "email"
+            },
+
+            "direccion": {
+              "description": "La dirección del cliente",
+              "type": "object",
+              "properties": {
+                "calle": {
+                  "description": "La calle de la dirección del cliente",
+                  "type": "string"
+                },
+
+                "ciudad": {
+                  "description": "La ciudad de la dirección del cliente",
+                  "type": "string"
+                },
+
+                "codigoPostal": {
+                  "description": "El código postal de la dirección del cliente",
+                  "type": "string"
+                },
+
+                "pais": {
+                  "description": "El país de la dirección del cliente",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "required": ["idCliente", "nombre", "email", "direccion"]
+        },
+        "productos": {
+          "description": "Lista de productos incluidos en el pedido",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "idProducto": {
+                "description": "El identificador único del producto",
+                "type": "string"
+              },
+
+              "nombre": {
+                "description": "El nombre del producto",
+                "type": "string"
+              },
+
+              "cantidad": {
+                "description": "La cantidad de unidades del producto en el pedido",
+                "type": "integer",
+                "minimum": 1
+              },
+
+              "precioUnitario": {
+                "description": "El precio unitario del producto",
+                "type": "number",
+                "minimum": 0
+              }
+            },
+            "required": ["idProducto", "nombre", "cantidad", "precioUnitario"]
+          }
+        },
+        "estadoPedido": {
+          "description": "El estado actual del pedido",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "idPedido",
+        "fecha",
+        "cliente",
+        "productos",
+        "estadoPedido",
+        "totalPedido"
+      ]
+    }
+  }
+}

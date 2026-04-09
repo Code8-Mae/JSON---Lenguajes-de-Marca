@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ejercicio 3 de Schemas",
+  "description": "Este es el tercer ejercicio de schemas, el cual es para un objeto mueble",
+  "type": "object",
+  "properties": {
+    "mueble": {
+      "description": "El tipo de mueble",
+      "type": "string"
+    },
+
+    "tipoMadera": {
+      "description": "El tipo de madera del mueble",
+      "type": "string"
+    },
+
+    "medidas": {
+      "description": "Medidas del mueble",
+      "type": "object",
+      "properties": {
+        "ancho_cm": {
+          "description": "El ancho del mueble en centímetros",
+          "type": "object",
+          "properties": {
+            "numero": {
+              "description": "El número que representa el ancho del mueble en centímetros",
+              "type": "number",
+              "minimum": 0
+            },
+            "unidad": {
+              "description": "La unidad de medida para el ancho del mueble",
+              "type": "string"
+            }
+          },
+          "required": ["numero", "unidad"]
+        },
+        "alto_cm": {
+          "description": "El alto del mueble en centímetros",
+          "type": "object",
+          "properties": {
+            "numero": {
+              "description": "El número que representa el alto del mueble en centímetros",
+              "type": "number",
+              "minimum": 0
+            },
+            "unidad": {
+              "description": "La unidad de medida para el alto del mueble",
+              "type": "string"
+            }
+          },
+          "required": ["numero", "unidad"]
+        },
+        "profundidad_cm": {
+          "description": "La profundidad del mueble en centímetros",
+          "type": "object",
+          "properties": {
+            "numero": {
+              "description": "El número que representa la profundidad del mueble en centímetros",
+              "type": "number",
+              "minimum": 0
+            },
+            "unidad": {
+              "description": "La unidad de medida para la profundidad del mueble",
+              "type": "string"
+            }
+          },
+          "required": ["numero", "unidad"]
+        }
+      },
+      "required": ["ancho_cm", "alto_cm", "profundidad_cm"]
+    }
+  },
+  "required": ["mueble", "tipoMadera", "medidas"]
+}

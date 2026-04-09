@@ -1,6 +1,5 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "JUAN ANTONIO TE QUIERO NUNCA DEJES DE DARME CLASES": "Holis",
   "title": "Ejercicio 2 de Schemas",
   "description": "Este es el segundo ejercicio de schemas, el cual es para un objeto mueble",
   "type": "object",
