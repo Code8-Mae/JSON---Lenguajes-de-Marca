@@ -63,10 +63,12 @@
                   "description": "El país de la dirección del cliente",
                   "type": "string"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
-          "required": ["idCliente", "nombre", "email", "direccion"]
+          "required": ["idCliente", "nombre", "email", "direccion"],
+          "additionalProperties": false
         },
         "productos": {
           "description": "Lista de productos incluidos en el pedido",
@@ -96,8 +98,10 @@
                 "minimum": 0
               }
             },
-            "required": ["idProducto", "nombre", "cantidad", "precioUnitario"]
-          }
+            "required": ["idProducto", "nombre", "cantidad", "precioUnitario"],
+            "additionalProperties": false
+          },
+          "minItems": 1
         },
         "estadoPedido": {
           "description": "El estado actual del pedido",
@@ -105,6 +109,11 @@
           "items": {
             "type": "string"
           }
+        },
+        "totalPedido": {
+          "description": "El total del pedido calculado a partir de los productos",
+          "type": "number",
+          "minimum": 0
         }
       },
       "required": [
@@ -114,7 +123,10 @@
         "productos",
         "estadoPedido",
         "totalPedido"
-      ]
+      ],
+      "additionalProperties": {
+        "^\\$": {}
+      }
     }
   }
 }

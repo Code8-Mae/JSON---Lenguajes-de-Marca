@@ -1,0 +1,23 @@
+{
+  "$schema": "Ejercicio5.schema.json",
+  "title": "Ejercicio 5 de Schemas",
+  "description": "Este es el quinto ejercicio de schemas, el cual es para un objeto persona con un nuevo campo llamado 'bomentario'",
+  "persona": {
+    "nacimiento": "1990-10-20",
+    "datos": {
+      "nombre": {
+        "tratamiento": "Sr",
+        "valor": "Pepe"
+      },
+      "apellidos": {
+        "numeroApellidos": 1,
+        "valor": "Garcia"
+      },
+      "dni": {
+        "letra": "B",
+        "valor": "99999999"
+      }
+    },
+    "comentario": "buena gente. . ."
+  }
+}

@@ -2,7 +2,7 @@
   "$schema": "Ejercicio4.schema.json",
   "informacionGeneral": {
     "idPedido": "A123",
-    "fecha": "2020-10-12T17:58:00.000Z",
+    "fecha": "2020-10-12T17:58:00Z",
     "cliente": {
       "idCliente": "C325",
       "nombre": "Juan Antonio López",
