@@ -7,15 +7,15 @@
       "properties": {
         "numeroBinario": {
           "type": "string",
-          "format": "binary"
+          "pattern": "^[01]{1}$"
         },
         "numeroOctal": {
           "type": "string",
-          "pattern": "^[0-7]+$"
+          "pattern": "^[0-7]{1}$"
         },
         "numerohexadecimal": {
           "type": "string",
-          "pattern": "^[0-9A-Fa-f]+$"
+          "pattern": "^[0-9]|[A-F]|[a-f]{1}$"
         },
         "sistemaOperativo": {
           "type": "string",
@@ -23,11 +23,11 @@
         },
         "codigoDeBarras": {
           "type": "string",
-          "pattern": "^\\d{1}-\\d{6}-\\d{6}$"
+          "pattern": "^\\d{1}(-\\d{6}){2}$"
         },
         "direccionMemoria": {
           "type": "string",
-          "pattern": "^0x[0-9A-Fa-f]+$"
+          "pattern": "^0x[0-9A-Fa-f]{8}$"
         },
         "direccionMac": {
           "type": "string",
@@ -38,15 +38,15 @@
           "properties": {
             "prefijo": {
               "type": "string",
-              "pattern": "^([0-9A-Fa-f]{1,4}:){2}[0-9A-Fa-f]{1,4}$"
+              "pattern": "^([0-9A-Fa-f]{0,4}:){2}[0-9A-Fa-f]{0,4}$"
             },
             "ip_subred": {
               "type": "string",
-              "pattern": "^[0-9A-Fa-f]{1,4}$"
+              "pattern": "^[0-9A-Fa-f]{0,4}$"
             },
             "id_interfaz": {
               "type": "string",
-              "pattern": "^([0-9A-Fa-f]{1,4}:){2}[0-9A-Fa-f]{1,4}$"
+              "pattern": "^([0-9A-Fa-f]{0,4}:){2}[0-9A-Fa-f]{0,4}$"
             }
           },
           "required": ["prefijo", "ip_subred", "id_interfaz"],

@@ -1,17 +1,65 @@
 {
   "$schema": "Ejercicio8.schema.json",
-  "biblioteca": [
+  "libros": [
     {
       "ISBN": "123-456-789-123-0",
-      "tipo": "novela"
+      "tipo": "novela",
+      "categoria": "prestamo",
+      "titulo": "El Gran Gatsby",
+      "autores": [
+        {
+          "nombre": "F. Scott",
+          "apellido": "Fitzgerald",
+          "nacionalidad": "estadounidense"
+        }
+      ],
+      "editor": {
+        "nombre": "Editorial XYZ",
+        "apellidos": "S.A.",
+        "nacionalidad": "española"
+      },
+      "numeroPaginas": 180,
+      "anioPublicacion": 1925
     },
     {
       "ISBN": "326-742-982-529-1",
-      "tipo": "ensayo"
+      "tipo": "ensayo",
+      "categoria": "prestamo",
+      "titulo": "El arte de la guerra",
+      "autores": [
+        {
+          "nombre": "Sun",
+          "apellido": "Tzu",
+          "nacionalidad": "chino"
+        }
+      ],
+      "editor": {
+        "nombre": "Editorial ABC",
+        "apellidos": "S.A.",
+        "nacionalidad": "española"
+      },
+      "numeroPaginas": 200,
+      "anioPublicacion": 1982
     },
     {
       "ISBN": "113-676-419-823-2",
-      "tipo": "biografia"
+      "tipo": "biografia",
+      "categoria": "consulta",
+      "titulo": "La vida de Leonardo da Vinci",
+      "autores": [
+        {
+          "nombre": "Walter",
+          "apellido": "Isaacson",
+          "nacionalidad": "estadounidense"
+        }
+      ],
+      "editor": {
+        "nombre": "Editorial DEF",
+        "apellidos": "S.A.",
+        "nacionalidad": "española"
+      },
+      "numeroPaginas": 300,
+      "anioPublicacion": 2005
     }
   ]
 }

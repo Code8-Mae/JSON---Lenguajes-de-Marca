@@ -1,7 +1,7 @@
 {
   "$schema": "Ejercicio7.schema.json",
   "patrones": {
-    "numeroBinario": "02",
+    "numeroBinario": "0",
     "numeroOctal": "7",
     "numerohexadecimal": "A",
     "sistemaOperativo": "Linux",

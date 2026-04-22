@@ -2,10 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "properties": {
-    "biblioteca": {
+    "libros": {
       "type": "array",
-      "minItems": 1,
-      "maxItems": 500,
       "items": {
         "type": "object",
         "properties": {
@@ -16,12 +14,70 @@
           "tipo": {
             "type": "string",
             "enum": ["novela", "ensayo", "biografia"]
+          },
+          "categoria": {
+            "type": "string",
+            "enum": ["prestamo", "consulta"]
+          },
+          "titulo": {
+            "type": "string"
+          },
+          "autores": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "nombre": {
+                  "type": "string"
+                },
+                "apellido": {
+                  "type": "string"
+                },
+                "nacionalidad": {
+                  "type": "string"
+                }
+              },
+              "required": ["nombre", "apellido", "nacionalidad"],
+              "additionalProperties": false
+            },
+            "minItems": 1,
+            "maxItems": 500
+          },
+          "editor": {
+            "type": "object",
+            "properties": {
+              "nombre": {
+                "type": "string"
+              },
+              "apellidos": {
+                "type": "string"
+              },
+              "nacionalidad": {
+                "type": "string"
+              }
+            },
+            "required": ["nombre", "apellidos", "nacionalidad"],
+            "additionalProperties": false
+          },
+          "numeroPaginas": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "anioPublicacion": {
+            "type": "integer",
+            "minimum": 0
           }
         },
-        "required": ["ISBN", "tipo"],
+        "required": ["ISBN", "tipo", "categoria", "titulo", "autores"],
         "additionalProperties": false
-      }
+      },
+      "minItems": 1,
+      "maxItems": 500
     }
   },
-  "required": ["biblioteca"]
+  "required": ["libros"],
+  "additionalProperties": false,
+  "patternProperties": {
+    "^\\$": {}
+  }
 }
