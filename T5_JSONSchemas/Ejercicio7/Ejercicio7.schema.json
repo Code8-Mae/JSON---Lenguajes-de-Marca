@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "patrones": {
+      "type": "object",
+      "properties": {
+        "numeroBinario": {
+          "type": "string",
+          "format": "binary"
+        },
+        "numeroOctal": {
+          "type": "string",
+          "pattern": "^[0-7]+$"
+        },
+        "numerohexadecimal": {
+          "type": "string",
+          "pattern": "^[0-9A-Fa-f]+$"
+        },
+        "sistemaOperativo": {
+          "type": "string",
+          "enum": ["Windows", "Linux", "macOS"]
+        },
+        "codigoDeBarras": {
+          "type": "string",
+          "pattern": "^\\d{1}-\\d{6}-\\d{6}$"
+        },
+        "direccionMemoria": {
+          "type": "string",
+          "pattern": "^0x[0-9A-Fa-f]+$"
+        },
+        "direccionMac": {
+          "type": "string",
+          "pattern": "^([0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}$"
+        },
+        "ipv6": {
+          "type": "object",
+          "properties": {
+            "prefijo": {
+              "type": "string",
+              "pattern": "^([0-9A-Fa-f]{1,4}:){2}[0-9A-Fa-f]{1,4}$"
+            },
+            "ip_subred": {
+              "type": "string",
+              "pattern": "^[0-9A-Fa-f]{1,4}$"
+            },
+            "id_interfaz": {
+              "type": "string",
+              "pattern": "^([0-9A-Fa-f]{1,4}:){2}[0-9A-Fa-f]{1,4}$"
+            }
+          },
+          "required": ["prefijo", "ip_subred", "id_interfaz"],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "numeroBinario",
+        "numeroOctal",
+        "numerohexadecimal",
+        "sistemaOperativo",
+        "codigoDeBarras",
+        "direccionMemoria",
+        "direccionMac",
+        "ipv6"
+      ],
+      "additionalProperties": false
+    },
+    "additionalProperties": false,
+    "patternProperties": {
+      "^\\$": {}
+    }
+  },
+  "required": ["patrones"]
+}

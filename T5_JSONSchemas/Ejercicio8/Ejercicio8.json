@@ -1,0 +1,17 @@
+{
+  "$schema": "Ejercicio8.schema.json",
+  "biblioteca": [
+    {
+      "ISBN": "123-456-789-123-0",
+      "tipo": "novela"
+    },
+    {
+      "ISBN": "326-742-982-529-1",
+      "tipo": "ensayo"
+    },
+    {
+      "ISBN": "113-676-419-823-2",
+      "tipo": "biografia"
+    }
+  ]
+}
