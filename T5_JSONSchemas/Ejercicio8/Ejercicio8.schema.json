@@ -37,11 +37,10 @@
                   "type": "string"
                 }
               },
-              "required": ["nombre", "apellido", "nacionalidad"],
+              "required": ["nombre", "apellido"],
               "additionalProperties": false
             },
-            "minItems": 1,
-            "maxItems": 500
+            "minItems": 1
           },
           "editor": {
             "type": "object",
@@ -56,19 +55,17 @@
                 "type": "string"
               }
             },
-            "required": ["nombre", "apellidos", "nacionalidad"],
             "additionalProperties": false
           },
           "numeroPaginas": {
-            "type": "integer",
-            "minimum": 1
+            "type": "integer"
           },
           "anioPublicacion": {
             "type": "integer",
-            "minimum": 0
+            "pattern": "^[0-9]{4}$"
           }
         },
-        "required": ["ISBN", "tipo", "categoria", "titulo", "autores"],
+        "required": ["titulo", "categoria", "autores"],
         "additionalProperties": false
       },
       "minItems": 1,
