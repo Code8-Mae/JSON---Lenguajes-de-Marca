@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "Informacion": {
+      "type": "object",
+      "properties": {
+        "nombre": {
+          "type": "string"
+        },
+
+        "direccion": {
+          "type": "object",
+          "properties": {
+            "calle": {
+              "type": "string"
+            },
+
+            "ciudad": {
+              "type": "string"
+            },
+
+            "codigoPostal": {
+              "type": "string",
+              "pattern": "^\\d{5}$"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "required": ["nombre", "direccion"],
+      "additionalProperties": false
+    },
+
+    "comandas": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 50,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-C]{2}-\\d{3}#$"
+          },
+
+          "numeroMesa": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 30
+          },
+
+          "camarero": {
+            "type": "string",
+            "maxLength": 20
+          },
+
+          "estado": {
+            "type": "string",
+            "enum": ["pendiente", "en preparación", "servida"]
+          },
+
+          "platos": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 10,
+            "items": {
+              "type": "object",
+              "properties": {
+                "nombre": {
+                  "type": "string"
+                },
+
+                "precio": {
+                  "type": "number",
+                  "minimum": 1
+                },
+
+                "cantidad": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 10
+                },
+
+                "extras": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": ["queso", "salmorejo", "jamon", "aceitunas"]
+                  }
+                }
+              },
+              "required": ["nombre", "cantidad"],
+              "additionalProperties": false
+            }
+          },
+          "pago": {
+            "type": "object",
+            "properties": {
+              "metodo": {
+                "type": "string",
+                "enum": ["efectivo", "tarjeta", "online"]
+              },
+
+              "importeTotal": {
+                "type": "number",
+                "minimum": 1
+              }
+            },
+            "required": ["metodo", "importeTotal"],
+            "additionalProperties": false
+          }
+        },
+        "required": ["id", "numeroMesa", "estado", "platos"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false,
+  "patternProperties": {
+    "^\\$": {}
+  }
+}

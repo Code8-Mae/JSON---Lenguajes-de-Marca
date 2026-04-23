@@ -1,0 +1,37 @@
+{
+  "$schema": "Ejercicio9.schema.json",
+  "torneo": {
+    "fecha": "2024-06-15",
+    "ubicacion": {
+      "ciudad": "Madrid",
+      "pais": "España"
+    }
+  },
+  "partidos": [
+    {
+      "ID": "M-abc-123",
+      "categoria": "Individual masculino",
+      "fase": "octavos",
+      "jugadores": [
+        {
+          "nombre": "Juan",
+          "apellido": "Perez",
+          "nacionalidad": "Argentina",
+          "ranking ATP/WTA": "1",
+          "tipo": "wildcard"
+        },
+        {
+          "nombre": "Carlos",
+          "apellido": "Gomez",
+          "nacionalidad": "España",
+          "ranking ATP/WTA": "2",
+          "tipo": "cabeza de serie"
+        }
+      ],
+      "resultadoFinal": {
+        "setsGanadosJugador1": 3,
+        "setsGanadosJugador2": 2
+      }
+    }
+  ]
+}

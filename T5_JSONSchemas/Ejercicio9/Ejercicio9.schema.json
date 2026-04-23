@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Torneo de Tenis",
+  "type": "object",
+  "properties": {
+    "torneo": {
+      "type": "object",
+      "properties": {
+        "fecha": {
+          "type": "string",
+          "format": "date"
+        },
+        "ubicacion": {
+          "type": "object",
+          "properties": {
+            "ciudad": {
+              "type": "string"
+            },
+            "pais": {
+              "type": "string"
+            }
+          },
+          "required": ["ciudad", "pais"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["fecha", "ubicacion"],
+      "additionalProperties": false
+    },
+    "partidos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "string",
+            "pattern": "^[WM]-[a-z]{3}-\\d{3}$"
+          },
+          "categoria": {
+            "type": "string",
+            "enum": ["Individual masculino", "Individual femenino", "Dual"]
+          },
+          "fase": {
+            "type": "string",
+            "enum": [
+              "primera ronda",
+              "octavos",
+              "cuartos",
+              "semifinales",
+              "final"
+            ]
+          },
+
+          "jugadores": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "nombre": {
+                  "type": "string"
+                },
+                "apellido": {
+                  "type": "string"
+                },
+                "nacionalidad": {
+                  "type": "string"
+                },
+                "ranking ATP/WTA": {
+                  "type": "string"
+                },
+                "tipo": {
+                  "type": "string",
+                  "enum": ["wildcard", "cabeza de serie"]
+                }
+              },
+              "required": [
+                "nombre",
+                "apellido",
+                "nacionalidad",
+                "ranking ATP/WTA",
+                "tipo"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 2,
+            "maxItems": 4
+          },
+          "resultadoFinal": {
+            "type": "object",
+            "properties": {
+              "setsGanadosJugador1": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "setsGanadosJugador2": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": ["setsGanadosJugador1", "setsGanadosJugador2"],
+            "additionalProperties": false
+          }
+        },
+        "required": ["ID", "categoria", "fase", "jugadores", "resultadoFinal"],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 128
+    }
+  },
+  "additionalProperties": false,
+  "patternProperties": {
+    "^\\$": {}
+  },
+  "required": ["torneo"]
+}

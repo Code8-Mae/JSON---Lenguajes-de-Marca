@@ -1,0 +1,37 @@
+{
+  "$schema": "Examen.schema.json",
+  "Informacion": {
+    "nombre": "Restaurante Dalí",
+    "direccion": {
+      "calle": "Calle Roncesvalles",
+      "ciudad": "Málaga",
+      "codigoPostal": "29007"
+    }
+  },
+  "comandas": [
+    {
+      "id": "BC-987#",
+      "numeroMesa": 30,
+      "camarero": "Juanma",
+      "estado": "pendiente",
+      "platos": [
+        {
+          "nombre": "Gazpacho Andaluz",
+          "precio": 7.49,
+          "cantidad": 1,
+          "extras": ["queso", "salmorejo"]
+        },
+        {
+          "nombre": "Croquetas Ibericas",
+          "precio": 8.99,
+          "cantidad": 10,
+          "extras": ["jamon", "aceitunas"]
+        }
+      ],
+      "pago": {
+        "metodo": "tarjeta",
+        "importeTotal": 7.49
+      }
+    }
+  ]
+}
